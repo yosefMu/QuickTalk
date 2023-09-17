@@ -8,8 +8,6 @@ Brief project description goes here.
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Getting Started
 
@@ -19,8 +17,8 @@ These instructions will help you get the project up and running on your local ma
 
 Make sure you have the following software installed on your system:
 
-- [Node.js](https://nodejs.org/) (v14.x or higher)
-- [npm](https://www.npmjs.com/) (v6.x or higher)
+- [Node.js](https://nodejs.org/) (v16.x)
+- [npm](https://www.npmjs.com/) (v8.x)
 
 ### Installation
 
