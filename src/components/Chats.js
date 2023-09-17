@@ -62,7 +62,9 @@ export default function Chats() {
                   "private-key": process.env.REACT_APP_CHAT_ENGINE_KEY,
                 },
               })
-              .then(() => setLoading(false))
+              .then((res) => {
+                setLoading(false);
+              })
               .catch((e) => console.log("e", e.response));
           });
         });
@@ -72,7 +74,7 @@ export default function Chats() {
   if (!user || loading) return <div />;
 
   function createDirectChat(creds) {
-    getOrCreateChat(
+    const result = getOrCreateChat(
       creds,
       { is_direct_chat: true, usernames: [username] },
       () => setUsername("")
@@ -81,13 +83,13 @@ export default function Chats() {
 
   function renderChatForm(creds) {
     return (
-      <div>
+      <div className="username-input-container">
         <input
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-        <button onClick={() => createDirectChat(creds)}>Create</button>
+        <button onClick={() => createDirectChat(creds)}>Find</button>
       </div>
     );
   }

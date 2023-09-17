@@ -47,7 +47,9 @@
 /* Login Page */
 
 #login-page {
-  background-image: linear-gradient(#40a9ff, #096dd9);
+  background-size: 100% 100%;
+  background-position: 0px 0px,0px 0px;
+  background-image: radial-gradient(60% 70% at 75% 30%, #FFFFFF69 11%, #073AFF00 100%),linear-gradient(125deg, #2F516CFF 0%, #1B1F2CFF 100%);
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -63,8 +65,8 @@
   padding-bottom: 66px;
   width: 420px;
   text-align: center;
-  background-color: white;
-  border-radius: 22px;
+  border-radius: 11px;
+  background-color: #d4d8d8a1;
 }
 
 .login-button {
@@ -98,4 +100,38 @@
   position: relative;
   left: calc(50vw - 33px);
   top: calc(50vh - 22px);
+}
+
+.username-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.username-input-container input,
+.username-input-container button {
+  margin-right: 10px;
+}
+
+.username-input-container input {
+  width: 100%;
+  border-radius: 2rem;
+  padding: 0.6rem;
+  background-color: #40a9ff23;
+  border: none;
+}
+
+.username-input-container input:focus {
+  outline: none;
+}
+
+.username-input-container button {
+  margin-right: 10px;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.6rem 1.5rem;
+  background-color: #1890ff;
+  color: white;
+  font-weight: 800;
 }
